@@ -8,107 +8,178 @@
       name="description"
       content="BBL trajecten bij De Witte Hoeve: leer en werk combineren in de zorg."
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav">
-                <div class="logo">
-          <img class="logo-image" src="images/logo.png" alt="De Witte Hoeve logo" />
-          <span class="logo-text">De Witte Hoeve</span>
-        </div>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="index.html#aanbod">Aanbod</a>
-          <a href="dagbesteding.html">Dagbesteding</a>
-          <a href="woongroep.html">Woongroep</a>
-          <a href="voor-wie.html">Voor wie</a>
-          <a href="werken-en-leren.html">Werken en leren</a>
-          <a href="ontstaan.html">Over ons</a>
-          <a href="contact.html" class="button button-small">Contact</a>
-        </div>
-      </nav>
+  <body class="bg-slate-50 text-slate-900">
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-24 -left-20 h-72 w-72 bg-amber-200/40 blur-3xl"></div>
+      <div class="absolute top-0 right-0 h-64 w-64 bg-emerald-200/30 blur-3xl"></div>
+      <div class="absolute bottom-0 right-16 h-80 w-80 bg-amber-100/50 blur-3xl"></div>
+    </div>
+    <header class="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+        <a class="flex items-center gap-3" href="index.html">
+          <img class="h-11 w-auto" src="images/logo.png" alt="De Witte Hoeve logo" />
+          <span class="text-lg font-semibold text-slate-900">De Witte Hoeve</span>
+        </a>
+        <nav class="hidden items-center gap-5 md:flex">
+          <a class="text-sm font-medium text-slate-700 hover:text-slate-900" href="index.html">Home</a>
+          <a class="text-sm font-medium text-slate-700 hover:text-slate-900" href="index.html#aanbod">Aanbod</a>
+          <a class="text-sm font-medium text-slate-700 hover:text-slate-900" href="dagbesteding.html">Dagbesteding</a>
+          <a class="text-sm font-medium text-slate-700 hover:text-slate-900" href="woongroep.html">Woongroep</a>
+          <a class="text-sm font-medium text-slate-700 hover:text-slate-900" href="voor-wie.html">Voor wie</a>
+          <a class="text-sm font-medium text-slate-700 hover:text-slate-900" href="werken-en-leren.html">Werken en leren</a>
+          <a class="text-sm font-medium text-slate-700 hover:text-slate-900" href="ontstaan.html">Over ons</a>
+          <a class="rounded-none bg-emerald-700 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-800" href="contact.html">Contact</a>
+        </nav>
+        <button
+          class="rounded-none border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 transition md:hidden"
+          id="menu-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="flex items-center gap-2">
+            <span id="menu-label" class="text-sm font-semibold">Menu</span>
+            <svg
+              id="menu-icon"
+              class="h-5 w-5 transition-transform duration-200"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg
+              id="close-icon"
+              class="hidden h-5 w-5 transition-transform duration-200"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="hidden border-t border-slate-200 bg-white md:hidden" id="mobile-menu">
+        <a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100" href="index.html">Home</a>
+        <a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100" href="index.html#aanbod">Aanbod</a>
+        <a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100" href="dagbesteding.html">Dagbesteding</a>
+        <a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100" href="woongroep.html">Woongroep</a>
+        <a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100" href="voor-wie.html">Voor wie</a>
+        <a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100" href="werken-en-leren.html">Werken en leren</a>
+        <a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100" href="ontstaan.html">Over ons</a>
+        <a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100" href="contact.html">Contact</a>
+      </div>
     </header>
 
     <main>
-      <section class="page-hero">
-        <div class="page-hero-inner">
-          <div>
-            <p class="eyebrow">BBL</p>
-            <h1>Werk en leren combineren in de zorg.</h1>
-            <p class="lead">
-              De Witte Hoeve leidt graag nieuwe beroepsprofessionals op in de
-              praktijk. Een werkleertraject is mogelijk als je wilt leren en
-              werken combineren of een overstap wilt maken.
-            </p>
-          </div>
-                    <div class="hero-photo">
-            <img src="images/dagbesteding-22-2.jpg" alt="BBL traject" />
-          </div>
+      <section class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 md:grid-cols-2">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700">BBL</p>
+          <h1 class="mt-3 text-3xl font-semibold text-slate-900">Werk en leren combineren in de zorg.</h1>
+          <p class="mt-3 text-sm text-slate-600">
+            De Witte Hoeve leidt graag nieuwe beroepsprofessionals op in de praktijk. Een werkleertraject is
+            mogelijk als je wilt leren en werken combineren of een overstap wilt maken.
+          </p>
         </div>
+        <img class="h-72 w-full object-cover" src="images/dagbesteding-22-2.jpg" alt="BBL traject" />
       </section>
 
-      <section class="section">
-        <div class="section-head">
-          <p class="eyebrow">Opleidingen</p>
-          <h2>Erkend leerbedrijf voor:</h2>
-        </div>
-        <ul class="checklist">
-          <li>Persoonlijk begeleider Maatschappelijke zorg (niveau 4)</li>
-          <li>Begeleider maatschappelijke zorg (niveau 3)</li>
-          <li>Verzorgende IG (niveau 3)</li>
-          <li>Helpende zorg en Welzijn (niveau 2)</li>
+      <section class="mx-auto max-w-6xl px-4 pb-12">
+        <h2 class="text-xl font-semibold text-slate-900">Erkend leerbedrijf voor</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-600">
+          <li>- Persoonlijk begeleider Maatschappelijke zorg (niveau 4)</li>
+          <li>- Begeleider maatschappelijke zorg (niveau 3)</li>
+          <li>- Verzorgende IG (niveau 3)</li>
+          <li>- Helpende zorg en Welzijn (niveau 2)</li>
         </ul>
       </section>
 
-      <section class="section cta">
-        <div class="cta-inner">
+      <section class="mx-auto max-w-6xl px-4 pb-14">
+        <div class="border border-emerald-700 bg-emerald-700 p-6 text-white shadow-sm md:flex md:items-center md:justify-between">
           <div>
-            <p class="eyebrow">Interesse</p>
-            <h2>Past jouw opleiding hierbij?</h2>
-            <p>Stuur je motivatie naar opleiding@zbdewittehoeve.nl.</p>
+            <p class="text-xs font-semibold uppercase tracking-widest text-emerald-100">Interesse</p>
+            <h2 class="mt-3 text-2xl font-semibold">Past jouw opleiding hierbij?</h2>
+            <p class="mt-3 text-sm text-emerald-50">Stuur je motivatie naar opleiding@zbdewittehoeve.nl.</p>
           </div>
-          <div class="cta-buttons">
-            <a class="button" href="mailto:opleiding@zbdewittehoeve.nl"
-              >Mail ons</a
-            >
-          </div>
+          <a class="mt-5 inline-flex rounded-none bg-white px-5 py-2 text-sm font-semibold text-emerald-700 md:mt-0" href="mailto:opleiding@zbdewittehoeve.nl">Mail ons</a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-inner">
+    <footer class="border-t border-slate-800 bg-slate-900 text-white">
+      <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-4">
         <div>
-          <h3>De Witte Hoeve</h3>
-          <p>Kleinschalige woon- en zorgboerderij in het buitengebied van Oploo.</p>
+          <h3 class="text-lg font-semibold">De Witte Hoeve</h3>
+          <p class="mt-3 text-sm text-slate-300">
+            Kleinschalige woon- en zorgboerderij in het buitengebied van Oploo.
+          </p>
+          <div class="mt-4 text-sm text-slate-300">
+            <p>Gemertseweg 22/26</p>
+            <p>5841 CD Oploo</p>
+            <p>0485-381381</p>
+            <p>06-36214221</p>
+            <p>06-51396288</p>
+          </div>
         </div>
         <div>
-          <h4>Werken en leren</h4>
-          <p><a href="werken-en-leren.html">Vacatures</a></p>
-          <p><a href="stage.html">Stage</a></p>
-          <p><a href="bbl.html">BBL</a></p>
-          <p><a href="zijinstromers.html">Zij-instroom</a></p>
+          <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-300">Informatie</h3>
+          <ul class="mt-3 space-y-2">
+            <li><a class="text-sm text-slate-200 hover:text-white" href="ontstaan.html">Ontstaan</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="waar-staan-we-voor.html">Waar staan we voor</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="voor-wie.html">Voor wie</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="jaarverslag.html">Jaarverslag</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="klachtenregeling.html">Klachtenregeling</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="privacy.html">Privacy</a></li>
+          </ul>
         </div>
         <div>
-          <h4>Informatie</h4>
-          <p><a href="ontstaan.html">Ontstaan</a></p>
-          <p><a href="waar-staan-we-voor.html">Waar staan we voor</a></p>
-          <p><a href="voor-wie.html">Voor wie</a></p>
+          <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-300">Locaties</h3>
+          <ul class="mt-3 space-y-2">
+            <li><a class="text-sm text-slate-200 hover:text-white" href="dagbesteding.html">Dagbesteding</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="woongroep.html">Woongroep</a></li>
+          </ul>
         </div>
         <div>
-          <h4>Contact</h4>
-          <p>info@zbdewittehoeve.nl</p>
-          <p>0485-381381</p>
-          <p>06-36214221</p>
-          <p>06-51396288</p>
+          <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-300">Werken en leren</h3>
+          <ul class="mt-3 space-y-2">
+            <li><a class="text-sm text-slate-200 hover:text-white" href="werken-en-leren.html">Vacatures</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="stage.html">Stage</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="bbl.html">BBL</a></li>
+            <li><a class="text-sm text-slate-200 hover:text-white" href="zijinstromers.html">Zij-instroom</a></li>
+          </ul>
         </div>
       </div>
-      <p class="footer-note">© De Witte Hoeve</p>
+      <div class="border-t border-slate-800 py-4 text-center text-xs text-slate-400">
+        (c) De Witte Hoeve
+      </div>
     </footer>
+
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const menuLabel = document.getElementById('menu-label');
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', (!expanded).toString());
+          if (menuIcon && closeIcon) {
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('rotate-90');
+          }
+          if (menuLabel) {
+            menuLabel.textContent = expanded ? 'Menu' : 'Sluiten';
+          }
+        });
+      }</script>
   </body>
 </html>
